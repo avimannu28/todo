@@ -36,7 +36,7 @@ function deletetask(value) {
     taskarray.splice(value, 1);
     display();
     console.log(completedtask)
-    console.log(value)
+    console.log(value);
     var a = document.getElementById("edit" + value + "").value;
     console.log(a)
     taskarray[value] = a
