@@ -2,10 +2,16 @@ taskarray = []
 completedtask = []
 
 function todo() {
+
     let a = document.getElementById('task').value;
-    taskarray.push(a)
-    console.log(taskarray)
-    display()
+    if (a == "") {
+        document.getElementById("error").innerHTML = "Please Enter Some Task First";
+    } else {
+        taskarray.push(a)
+        console.log(taskarray)
+        display()
+    }
+
 
 }
 
@@ -21,6 +27,7 @@ function display() {
 
     form += "</table>"
     document.getElementById('result').innerHTML = form;
+    document.getElementById('task').value = "";
 }
 
 function addtocheck(value, i) {
